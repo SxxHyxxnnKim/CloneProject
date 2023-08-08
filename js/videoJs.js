@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-   // get video info(selected by user) 여기는 비디오  추가된 부분
+   // get video info(selected by user)
    let requestUrl = window.location.href;
    let url = new URL(requestUrl);
-   let videoId = url.searchParams.get("videoId"); //비디오의 고유번호
+   let videoId = url.searchParams.get("videoId");
    let videoUrl = "http://oreumi.appspot.com/video/getVideoInfo?video_id=" + videoId;
    fetch(videoUrl)
      .then((response) => response.json())
