@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> -->
+    <!--css import-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/channel.css">
+    <!-- Google Fonts link-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./imgHome/Logo_mini.svg" rel="shortcut icon" type="image/x-icon">
+    <title>Channel</title>
+</head>
+
+<body>
+    <!--header container -->
+    <div class="wrapHeader">
+        <!--Top Navigation-->
+        <header id="navigation" class="navigation">
+            <!--header(search) left part(menu icon & logo)-->
+            <div id="topLeft" class="topLeft">
+                <div class="leftContent">
+                    <span class="material-symbols-outlined" onclick="toggleSidebar()">menu</span>
+                    <img src="imgHome/Youtube-Logo.svg" alt="" onclick="goHome()"> <!-- YouTube Logo 추가-->
+                </div>
+            </div>
+            <!-- center part(search)-->
+            <div class="searchBox" id="searchBox">
+                <input type="text" name="searchInput" id="searchInput" onkeyup="enterkey();" class="searchInput"
+                    placeholder="search">
+                <button class="searchBtn" id="searchBtn" onclick="fn_search()">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+                </button>
+                <button class="micButton" id="micButton">
+                    <img class="mic" id="mic" src="imgHome/mic.svg" alt="Microphone"> <!--Microphone 추가-->
+                </button>
+                <div class="micContainer" id="micContainer">
+                    <!-- mic modal content -->
+                </div>
+            </div>
+            <div class="profile" id="profile">
+                <div class="rightContent" id="rightContent">
+                    <img class="create" id="create" src="imgHome/create.svg" alt="Create Icon"> <!--create icon 추가-->
+                    <!-- <div class="createContainer" id="createContainer"> -->
+                    <!-- create modal content -->
+                    <!-- </div> -->
+                    <img class="apps" id="apps" src="imgHome/apps.svg" alt="Apps Icon"> <!-- Apps icon 추가-->
+                    <span class="notifications material-symbols-outlined" id="notifications">notifications</span>
+                    <!-- notiContainer의 inline style 적용은 css 작업후 지울 예정 -->
+                    <div class="notiContainer" id="notiContainer" style="display: none;">
+                        <!-- notification modal content -->
+                    </div>
+                    <img class="profile" id="profileImage" src="imgHome/Profile.svg" alt="Profile Icon">
+                    <div class="profileContainer" id="profileContainer">
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <!-- header 는 모두 공통적으로 잡아놓기 -->
+    <!--Main-->
+    <!-- main container -->
+    <div class="mainContainer">
+        <!--nav container-->
+        <div class="wrapNav" id="wrapNav">
+            <!--sideBar-->
+            <nav class="sideBar" id="sideBar">
+                <!--sidebar Top-->
+                <div class="sideBarTop" id="sideBarTop">
+                    <ul class="sideBarContent">
+                        <li>
+                            <span class="material-symbols-outlined">home</span>
+                            <span class="subtitle home" id="home">Home</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">explore</span>
+                            <span class="subtitle explore" id="explore">Explore</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">subscriptions</span>
+                            <span class=" subtitle subscriptions" id="subscription">subscriptions</span>
+                        </li>
+                    </ul>
+
+                    <!-- <hr class="border"> -->
+
+                    <div class="border">
+
+                </div> <!-- 확인 완료 -->
+
+                <!--sidebar Top2  확인 바랍니다! -->
+                <div class="sideBarTop2" id="sideBarTop2">
+                    <ul class="sideBarContent">
+                        <li>
+                            <span class="material-symbols-outlined">video_library</span>
+                            <span class="subtitle library" id="library">library</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">history</span>
+                            <span class="subtitle history" id="history">history</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">smart_display</span>
+                            <span class="subtitle yourVideos" id="yourVideos">Your Videos</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">pace</span>
+                            <span class="subtitle watch" id="watch">Watch Later</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">thumb_up</span>
+                            <span class="subtitle likeVideo" id="likeVideo">Liked Videos</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">stat_minus_1</span>
+                            <span class="subtitle showMore" id="showMore">더보기</span>
+                        </li>
+                    </ul>
+
+                    <!-- <hr class="border"> -->
+
+                    <div class="border">
+
+                </div>
+                <!--sidebar subscriptions-->
+                <div class="sideBarSubscriptions" id="sideBarSubscriptions">
+                    <p class="sideBarTitle">SUBSCRIPTIONS</p>
+                    <ul class="sideBarContent">
+                        <li>
+                            <img src="imgHome/oreumi.jpg" alt="">
+                            <span class="subtitle channelName" id="channelName">오르미 2기</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/oreumi.jpg" alt="">
+                            <span class="subtitle channelName" id="channelName">알아서잘하조</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/mang1.png" alt="">
+                            <span class="subtitle channelName" id="channelName">이민영의 Github교실</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/mang2.png" alt="">
+                            <span class="subtitle channelName" id="channelName">김서현</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/mang3.png" alt="">
+                            <span class="subtitle channelName" id="channelName">배영덕</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/mang4.png" alt="">
+                            <span class="subtitle channelName" id="channelName">최다운</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/mang5.png" alt="">
+                            <span class="subtitle channelName" id="channelName">장종민</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">stat_minus_1</span>
+                            <span class="subtitle showMoreSub" id="showMoreSub">더보기</span>
+                        </li>
+                    </ul>
+
+                    <!-- <hr class="border"> -->
+                        <div class="border">
+
+                </div>
+                <!--sidebar bottom-->
+                <div class="sideBarBottom" id="sideBarBottom">
+                    <p class="sideBarTitle">MORE FROM YOUTUBE</p>
+                    <ul class="sideBarContent">
+                        <li>
+                            <img src="imgHome/premium.svg" alt="">
+                            <span class="subtitle premium" id="premium">Youtube Premium</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/gaming.svg" alt="">
+                            <span class="subtitle gaming" id="gaming">Gaming</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/live.svg" alt="">
+                            <span class="subtitle live" id="live">Live</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/premium.svg" alt="">
+                            <span class="subtitle sports" id="sports">Sports</span>
+                        </li>
+                        <div class="border">
+                    </ul>
+                    <!-- sidebar bottom(settings 부분) -->
+
+                    <!-- <hr class="border"> -->
+
+                    
+                
+                    <ul class="sideBarContent">
+                        <li>
+                            <img src="imgHome/setting.svg" alt="">
+                            <span class="subtitle settings" id="settings">Settings</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/history.svg" alt="">
+                            <span class="subtitle report history" id="report history">Report history</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/help.svg" alt="">
+                            <span class="subtitle help" id="help">Help</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/feedback.svg" alt="">
+                            <span class="subtitle send feedback" id="send feedback">Send feedback</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="border">
+            </nav>
+            
+            <div class="sideBarFooter">
+                <span class="Footer1"> 
+                    About Press Copyright<br>
+                    Contact us Creators<br>
+                    Advertise Developers
+                </span>
+                <span class="Footer2"> 
+                    Terms Privacy Policy & Safety<br>
+                    How Youtube works<br>
+                    Test new features
+                </span>
+                <span class="Footer3"> 
+                    © 2023 Oreumi 3rd 시작이반<br>
+                    <t>알아서잘하조</t>
+                </span>
+            </div>
+        </div>
+
+
+
+        <div class="wrapMain">
+            <!--channel information-->
+            <div class="channelContainer">
+                <div class="banner" id="banner">
+                    <img src="imgChannel/channelCover.svg">
+                </div>
+                <div class="channelTitle">
+                    <div class="channelProfile">
+                        <!-- <div class="channelProfilePic">
+                            <img src="imgChannel/paka.jpg" class="profileImg">
+                        </div>
+                        <div class="channelProfileName">
+                            <span id="channelName" class="channelName">Marcus Levin</span>
+                            <span id="subscribers" class="subscribers">1.2M subscribers</span>
+                        </div> -->
+                    </div>
+                    <div class="buttoncon">
+                        <button onclick="changeImg()" class="button" id="subscribe">구독</button>
+                        <div style="display: none;" id="options">
+                            <a id="all" onclick="selectOption('all')">
+                                <img src="imgChannel/notifications_active.svg">전체</a>
+                            <a id="custom" onclick="selectOption('custom')">
+                                <img src="imgChannel/notifications.svg">맞춤설정</a>
+                            <a id="none" onclick="selectOption('none')">
+                                <img src="imgChannel/notifications_off.svg">없음</a>
+                            <a id="cancel" onclick="subCancle()">
+                                <img src="imgChannel/person_remove.svg">구독취소</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="channelMain">
+                    <!--header Navigation-->
+                    <header class="channelNav">
+                        <div>
+                            <ul class="navContainer">
+                                <li class="navContainer-item">
+                                    <a href="#">HOME</a>
+                                </li>
+                                <li class="navContainer-item">
+                                    <a href="#">VIDEOS</a>
+                                </li>
+                                <li class="navContainer-item">
+                                    <a href="#">PLAYLISTS</a>
+                                </li>
+                                <li class="navContainer-item">
+                                    <a href="#">COMMUNITY</a>
+                                </li>
+                                <li class="navContainer-item">
+                                    <a href="#">CHANNELS</a>
+                                </li>
+                                <li class="navContainer-item">
+                                    <a href="#">ABOUT</a>
+                                </li>
+                                <li class="navContainer-item">
+                                    <span class="material-symbols-outlined">
+                                        <a href="#">search</a>
+                                    </span>
+                                </li>
+                                <li class="navContainer-item">
+                                    <span class="material-symbols-outlined rightArrow">
+                                        <a>arrow_forward_ios</a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </header>
+                </div>
+            </div>
+            <!-- main video part -->
+            <div class="ChannelMainVideo" id="ChannelMainVideo">
+                <div class="mainVideoContainer" id="mainVideoContainer">
+                    <!-- <div class="videoPart" id="videoPart">
+                        <video src="https://storage.googleapis.com/oreumi.appspot.com/video_1.mp4" controls autoplay
+                            muted></video>
+                    </div>
+                    <div class="videoDescPart" id="videoDescPart">
+                        <div class="mainVideoTitle" id="mainVideoTitle">
+                            <p>video title</p>
+                        </div>
+                        <div class="mainVideoInfo" id="mainVideoInfo">
+                            <span class="mainVideoViews" id="mainVideoViews">
+                                [views]
+                            </span>
+                            <span class="mainVideoUploadDates" id="mainVideoUploadDates">
+                                [upload date]
+                            </span>
+                        </div>
+                        <div class="mainVideoDesc" id="mainVideoDesc">
+                            Chris Fisher, also known as the Blind Woodturner...
+                        </div>
+                    </div> -->
+                </div>
+                <div class="endLine">
+            </div>
+            <!-- video part // js 완성시 교체-->
+            <div class="playlistContainer">
+                <div class="playList">
+                    <div class="playlistHeader">
+                        <span class="playlistTitle" style="color: #FFF;"> 인기동영상</span>
+                        <div class="playBtn">
+                            <img src="imgChannel/playAllimg.svg" alt="재생버튼">
+                            <p>모두재생</p>
+                        </div>
+                    </div>
+                    <div class="contentsListFavorite" id ="contentsListFavorite">
+                        <!-- <div class="playlistVideo">
+                            <img class="playThumbnail" src="https://storage.googleapis.com/oreumi.appspot.com/img_4.jpg"
+                                alt="썸네일">
+                            <div class="playlistDesc">
+                                <span class="plVideoName">BIO</span>
+                                <span class="plVideoInfo" id="plVideoChannel">Marcus Levin</span>
+                                <span class="plVideoInfo" id="plVideoViews">329K views. 1 month ago</span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="playList">
+                    <div class="playlistHeader">
+                        <span class="playlistTitle" style="color: #FFF;">최근 동영상</span>
+                        <div class="playBtn">
+                            <img src="imgChannel/playAllimg.svg" alt="재생버튼">
+                            <p>모두 재생</p>
+                        </div>
+                    </div>
+                    <div class="contentsListDate" id="contentsListDate">
+                        <!-- <div class="playlistVideo">
+                            <img class="playThumbnail" src="https://storage.googleapis.com/oreumi.appspot.com/img_1.jpg"
+                                alt="썸네일">
+                            <div class="playlistDesc">
+                                <span class="plVideoName"> Blockchain</span>
+                                <span class="plVideoInfo" id="plVideoChannel">Marcus Levin</span>
+                                <span class="plVideoInfo" id="plVideoViews">11 views. 1 month ago</span>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="js/header.js"></script>
+<script src="js/channel.js"></script>
+
+</html>

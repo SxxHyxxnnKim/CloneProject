@@ -1,0 +1,894 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    /* color */
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color: #1359c7;
+    --red-color: #e30504;
+    --grey-dark-color: #616161;
+    --gray-light-color: #8e8e8e;
+
+    /* size */
+    --padding: 12px;
+    --avatar-size: 36px;
+
+    /* font size */
+    --font-superlarge: 22px;
+    --font-verylarge: 20px;
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+body {
+    background-color: #181818;
+    color: #fff;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* font */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.border {
+    /* width: 224px; */
+    /* height: 100%; */
+    color: #303030;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #303030;
+
+
+}
+
+/*header div : 상단 검색바 부분 start-----------*/
+.wrapHeader {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #212121;
+}
+
+/* header */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    width: 100%;
+    flex-shrink: 0;
+    padding: 15px;
+}
+
+/* header left
+   topLeft for grouping left content(hamburger and logo) */
+.leftContent{
+    cursor: pointer;
+}
+
+.leftContent span {
+    color: white;
+    padding-right: 11px;
+}
+
+/*search*/
+.searchBox {
+    display: flex;
+    width: 470px;
+    height: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.searchInput {
+    border: 1px solid #303030;
+    background-color: #121212;
+    color: #AAAAAA;
+    width: 400px;
+    border: 0;
+    height: 100%;
+    border-radius: 2px 0 0 2px;
+    padding: 10px;
+}
+
+.searchBtn {
+    border: none;
+    /*remove button style */
+    border: 1px solid #303030;
+    background-color: #303030;
+    color: white;
+    height: 100%;
+    width: 60px;
+    margin-right: 4px;
+}
+
+/*mic button*/
+.micButton {
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+    border: none;
+    /*remove button style*/
+    border-radius: 70%;
+    margin-left: 5px;
+}
+
+.micButton:hover {
+    background-color: #2980b9;
+}
+
+.mic {
+    color: white;
+}
+
+/* header right
+   profile for grouping right content */
+/* right Content(div) */
+.rightContent {
+    margin: 8px 8px 8px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.create,
+.apps,
+.notifications {
+    padding: 8px;
+}
+
+.notifications {
+    color: #fff;
+}
+
+/* div for grouping all */
+.container {
+    display: flex;
+}
+
+/* article div */
+.wrapArticle {
+    margin-left: 162px;
+}
+
+/* article */
+.primary {
+    margin: 24px 24px 0px 24px;
+    width: 664px;
+    height: 968px;
+    /* padding: 24px 0px 0px 24px; */
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+/* video */
+.videoContainer {
+    text-align: center;
+    /* 수정한부분------------------- */
+    /* display: flex;
+    padding: 30px 0px 8px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem; */
+}
+
+.selectedVideo {
+    width: 640px;
+    height: 360px;
+}
+
+.videoTitle {
+    margin-top: 23px;
+    font-size: 18px;
+}
+
+/* videoDesc
+    div for grouping video extra features */
+.selectVideoInfo {
+    display: flex;
+    flex-direction: row;
+}
+
+/* video info div */
+.videoInfo {
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+
+/* ----------------0804확인부분------------ */
+.views,
+.uploadDate {
+    color: #AAAAAA;
+    font-size: 14px;
+    /* font-weight: bold; */
+}
+
+.videoExtra {
+    margin-left: auto;
+}
+
+.videoExtra ul {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 8px;
+}
+
+.videoExtra ul li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* icon & img margin control
+material-symbols-outlined => icon class name */
+.videoExtra img,
+.material-symbols-outlined {
+    margin-right: 9px;
+}
+
+.videoLike,
+.videoDislike {
+    border: none;
+    background-color: #181818;
+    color: #fff;
+}
+
+.videoLikesCount,
+.videoDislikeCount {
+    margin-left: 4px;
+}
+
+/* Video Desc(>channelTitle>channelimg, channelinfo, buttoncon */
+/* 추가한부분------------------- */
+.videoDesc {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4px 4px 6px;
+    gap: 10px;
+}
+
+.channelTitle {
+    display: flex;
+    align-items: center;
+}
+
+/* video information */
+.classInfo {
+    display: flex;
+}
+
+.channelimg img {
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+    margin-bottom: 3px;
+    border-radius: 70%;
+}
+
+.channelName {
+    margin-top: 11px;
+    margin-right: 9px;
+    font-size: 14px;
+    color:white
+    /* font : inherit */
+}
+
+.subscribers {
+    margin-bottom: 10px;
+    color: #AAAAAA;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.buttoncon {
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+    white-space: nowrap;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border: none;
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 20px;
+}
+
+.button:hover {
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 150px;
+    background-color: #282828;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+#options>a {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: #f1f1f1;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#options>a:hover {
+    background-color: #535353;
+    width: 100%;
+    border-radius: 20px;
+}
+
+#options img {
+    filter: invert(100%);
+}
+
+.buttoncon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* video explanation */
+.videoExplain {
+    padding-left: 64px;
+    padding-right: 15px;
+    padding-bottom: 2px;
+    /* padding-top: 12px; */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 18px;
+
+}
+
+/* show more */
+.showMore {
+    margin-top: 10px;
+    color: #AAAAAA;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.showMore:hover {
+    text-decoration: underline;
+}
+
+/* Comment */
+/* div for grouping comment info */
+.commentInfo {
+    display: flex;
+    align-items: center;
+    /* margin-top: 24px; */
+}
+
+.commentCount {
+    margin-right: 28px;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+/* div for sort comment */
+.sortComment {
+    display: flex;
+    align-items: center;
+}
+
+.sortComment span {
+    margin-right: 11px;
+}
+
+.sortComment select {
+    border: none;
+    border-radius: 0;
+    appearance: none;
+    background-color: #181818;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    width: 65px;
+    height: 24px;
+}
+
+
+/* write comment */
+.writeComment {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+}
+
+/* comment writer image */
+.commentWriter {
+    /* width: 40px;
+    height: 40px; */
+    margin-right: 16px;
+}
+
+/* input container
+    div for grouping input */
+.inputContainer {
+    width: 100%;
+    height: 40px;
+}
+
+/* input comment */
+.commentInput {
+    border: none;
+    border-radius: 0;
+    appearance: none;
+    margin-top: 7px;
+    background-color: #181818;
+    color: #fff;
+    width: 100%;
+}
+
+.commentBorder {
+    margin-top: 4px;
+    color: #303030;
+}
+
+/* comment list */
+/* other comment
+    div for grouping comment written by others */
+.otherComment {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+}
+
+/* div for grouping writer information */
+.writerInfo {
+    display: flex;
+}
+
+/* about writer */
+.writerInfo img {
+    margin-right: 16px;
+}
+
+/* 0804 잠깐 주석---------------------- */
+/* .commentDetail{
+    display: flex;
+    height: 22px;
+    margin-bottom: 2px;
+ } */
+.writerName {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.writeTime {
+    font-size: 12px;
+    color: #AAAAAA;
+}
+
+/* div commentcontent */
+.commentContent {
+    height: 24px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 14px;
+}
+
+/* comment like
+    div for grouping comment buttons */
+.commentLikeDiv{
+    margin-left: 70px;
+}
+.commentLikeDiv ul {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.commentLikeDiv ul li {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.commentLike,
+.commentDislike {
+    border: none;
+    background-color: #181818;
+    color: #fff;
+
+}
+
+.commentDislikeCount,
+.commentLikesCount {
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.reply {
+    color: #AAAAAA;
+    font-size: 12px;
+}
+
+/* aside */
+.secondary {
+    margin-top: 24px;
+    width: 426px;
+    height: 968px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* secondary top menu */
+.secondaryMenu {
+    margin: 8px 8px 8px 0px;
+}
+
+/* secondary top munu button */
+.allBtn,
+.classfyBtn {
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    color: #fff;
+    background-color: #303030;
+    border: 1px solid #AAAAAA;
+    border-radius: 32px;
+}
+
+.allBtn {
+    margin-right: 8px;
+}
+
+/* btn mouse hover */
+.secondaryMenu button:hover {
+    color: #303030;
+    background-color: #fff;
+}
+
+/* div for secondary video */
+.secondaryVideo {
+    display: flex;
+    margin-top: 8px;
+}
+
+.videoThumbnail {
+    width: 168px;
+    height: 94px;
+    margin-right: 8px;
+}
+.videoThumbnail img {
+    width: 168px;
+    height: 94px;
+    margin-right: 8px;
+}
+
+.secondaryVideoTitle {
+    color: #fff;
+    font-size: 14px;
+    width: 200px;
+    height: 40px;
+    margin-top: 7px;
+    margin-right: 24px;
+}
+
+.videoOwner,
+.videoSimpleInfo {
+    color: #AAAAAA;
+    font-size: 12px;
+    width: 200px;
+    height: 18px;
+}
+
+/* modal css */
+/* mic modal */
+/* micContainer
+    div for grouping mic modal content */
+.micContainer {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+/* mic modal inner div */
+.micModal {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%
+}
+
+/* micModalClose
+     div for mic modal close button */
+.micModalClose {
+    display: flex;
+}
+
+/* mic modal close button */
+.closeMic {
+    margin-left: auto;
+    border: none;
+    border-radius: 70%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.closeMic:hover {
+    background-color: #888;
+}
+
+/* mic modal text div */
+.micModalText {
+    margin-bottom: 30px;
+    color: black;
+}
+
+.micModalText p {
+    margin-top: 10px;
+}
+
+/* check button */
+.checkMic {
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: 35px;
+    border: none;
+    background-color: var(--red-color);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* mic button */
+.record {
+    display: block;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    background-color: var(--red-color);
+    border: none;
+    border-radius: 70%;
+    
+}
+
+.checkMic:hover,
+.record:hover {
+    background-color: #A50000;
+}
+
+/* share modal */
+.shareModalContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.shareModal {
+    background-color: white;
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+    width: 450px;
+    color: black;
+}
+
+.shareModalHeader {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.shareTitle {
+    margin-left: 15px;
+}
+
+.shareClose {
+    margin-left: auto;
+    border: none;
+    background-color: white;
+}
+
+.shareOption {
+    display: flex;
+    margin-left: 15px;
+}
+
+.shareImg img {
+    width: 50px;
+    height: 50px;
+}
+
+.shareHow {
+    font-size: 10px;
+    text-align: center;
+}
+
+.shareKakao,
+.shareFacebook,
+.shareEmail {
+    margin-right: 10px;
+    text-align: center;
+}
+
+.copyUrl {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    height: 50px;
+}
+
+.currentUrl {
+    margin-left: 10px;
+}
+
+.currentUrl p {
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.urlCopyBtn {
+    margin-left: auto;
+    margin-right: 8px;
+}
+
+.copyBtn {
+    width: 50px;
+    height: 35px;
+    border: none;
+    border-radius: 50px;
+    background-color: #4169E1;
+    color: white;
+}
+
+/* save modal */
+.saveModalContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.saveModal {
+    background-color: white;
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+    width: 250px;
+    color: black;
+    font-weight: lighter;
+}
+
+.saveModalHeader {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 20px;
+}
+.saveTitle {
+    margin-left: 15px;
+}
+.saveClose {
+    margin-left: auto;
+    border: none;
+    background-color: white;
+}
+
+.saveModalContent{
+    font-size: 15px;
+}
+.saveOption{
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+.saveOption input{
+    width: 15px;
+    height: 15px;
+	border: 2px solid #bcbcbc;
+	cursor: pointer;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.saveOption span{
+    margin-left: auto;
+}
+
+
+.makeNewPlaylist{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+.makeNewPlaylist:hover{
+    cursor: pointer;
+}

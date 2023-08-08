@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <!--css import-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/home.css"/>
+    <!-- Google Fonts link-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./imgHome/Logo_mini.svg" rel="shortcut icon" type="image/x-icon">
+    <title>HOME</title>
+</head>
+<body>
+    <!--header container -->
+    <div class="wrapHeader">
+        <!--Top Navigation-->
+        <header id="navigation" class="navigation">
+            <!--header(search) left part(menu icon & logo)-->
+            <div id="topLeft" class="topLeft">
+                <div class="leftContent">
+                    <span class="material-symbols-outlined" onclick="toggleSidebar()">menu</span>
+                    <img src="imgHome/Youtube-Logo.svg" alt="" onclick="goHome()">
+                </div>
+            </div>
+            <!-- center part(search)-->
+            <div class="searchBox" id="searchBox">
+                <input type="text" name="searchInput" id="searchInput" onkeyup="enterkey();" class="searchInput" placeholder="search"> <!-- enterkey 기능 확인 -->
+                    <button class="searchBtn" id="searchBtn" onclick="fn_search()">  <!-- fn_search 기능 확인 완료-->
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                </button>
+                <button class="micButton" id="micButton">
+                    <img class="mic" id="mic" src="imgHome/mic.svg" alt="">
+                </button>
+                <div class="micContainer" id="micContainer">
+                    <!-- mic modal content -->
+                </div>
+            </div>
+            <div class="profile" id="profile">
+                <div class="rightContent" id="rightContent">
+                    <img class="create" id="create" src="imgHome/create.svg" alt="">
+                        <div class="createContainer" id="createContainer">
+                        </div>
+                    <img class="apps" id="apps" src="imgHome/apps.svg" alt="">
+                    <span class="notifications material-symbols-outlined" id="notifications">notifications</span>
+                    <div class="notiContainer" id="notiContainer">
+                        <!-- notification modal content -->
+                    </div>
+                    <img class="profileButton" id="profileButton" src="imgHome/Profile.svg" alt="">
+                    <div class="profileContainer" id="profileContainer">
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+<!-- 확인 완료 -->
+    <!-- main container -->
+    <div class="mainContainer">
+        <!--nav container-->
+        <div class="wrapNav" id="wrapNav">
+            <!--sideBar-->
+            <nav class="sideBar" id="sideBar">
+                <!--sidebar Top-->
+                <div class="sideBarTop" id="sideBarTop">
+                    <ul class="sideBarContent">
+                        <li>
+                            <span class="material-symbols-outlined">home</span>
+                            <span class="subtitle home" id="home">Home</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">explore</span>
+                            <span class="subtitle explore" id="explore">Explore</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">subscriptions</span>
+                            <span class=" subtitle subscriptions" id="subscription">subscriptions</span>
+                        </li>
+                    </ul>
+
+                    <!-- <hr class="border"> -->
+
+                    <div class="border">
+
+                </div> <!-- 확인 완료 -->
+
+                <!--sidebar Top2  확인 바랍니다! -->
+                <div class="sideBarTop2" id="sideBarTop2">
+                    <ul class="sideBarContent">
+                        <li>
+                            <span class="material-symbols-outlined">video_library</span>
+                            <span class="subtitle library" id="library">library</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">history</span>
+                            <span class="subtitle history" id="history">history</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">smart_display</span>
+                            <span class="subtitle yourVideos" id="yourVideos">Your Videos</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">pace</span>
+                            <span class="subtitle watch" id="watch">Watch Later</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">thumb_up</span>
+                            <span class="subtitle likeVideo" id="likeVideo">Liked Videos</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">stat_minus_1</span>
+                            <span class="subtitle showMore" id="showMore">더보기</span>
+                        </li>
+                    </ul>
+
+                    <!-- <hr class="border"> -->
+
+                    <div class="border">
+
+                </div>
+                <!--sidebar subscriptions-->
+                <div class="sideBarSubscriptions" id="sideBarSubscriptions">
+                    <p class="sideBarTitle">SUBSCRIPTIONS</p>
+                    <ul class="sideBarContent">
+                        <li>
+                            <img src="imgHome/oreumi.jpg" alt="">
+                            <span class="subtitle channelName" id="channelName">오르미 2기</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/oreumi.jpg" alt="">
+                            <span class="subtitle channelName" id="channelName">알아서잘하조</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/mang1.png" alt="">
+                            <span class="subtitle channelName" id="channelName">이민영의 Github교실</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/mang2.png" alt="">
+                            <span class="subtitle channelName" id="channelName">김서현</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/mang3.png" alt="">
+                            <span class="subtitle channelName" id="channelName">배영덕</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/mang4.png" alt="">
+                            <span class="subtitle channelName" id="channelName">최다운</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/mang5.png" alt="">
+                            <span class="subtitle channelName" id="channelName">장종민</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">stat_minus_1</span>
+                            <span class="subtitle showMoreSub" id="showMoreSub">더보기</span>
+                        </li>
+                    </ul>
+
+                    <!-- <hr class="border"> -->
+                        <div class="border">
+
+                </div>
+                <!--sidebar bottom-->
+                <div class="sideBarBottom" id="sideBarBottom">
+                    <p class="sideBarTitle">MORE FROM YOUTUBE</p>
+                    <ul class="sideBarContent">
+                        <li>
+                            <img src="imgHome/premium.svg" alt="">
+                            <span class="subtitle premium" id="premium">Youtube Premium</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/gaming.svg" alt="">
+                            <span class="subtitle gaming" id="gaming">Gaming</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/live.svg" alt="">
+                            <span class="subtitle live" id="live">Live</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/premium.svg" alt="">
+                            <span class="subtitle sports" id="sports">Sports</span>
+                        </li>
+                        <div class="border">
+                    </ul>
+                    <!-- sidebar bottom(settings 부분) -->
+
+                    <!-- <hr class="border"> -->
+
+                    
+                
+                    <ul class="sideBarContent">
+                        <li>
+                            <img src="imgHome/setting.svg" alt="">
+                            <span class="subtitle settings" id="settings">Settings</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/history.svg" alt="">
+                            <span class="subtitle report history" id="report history">Report history</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/help.svg" alt="">
+                            <span class="subtitle help" id="help">Help</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/feedback.svg" alt="">
+                            <span class="subtitle send feedback" id="send feedback">Send feedback</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="border">
+            </nav>
+
+            <div class="sideBarFooter">
+                <span class="Footer1"> 
+                    About Press Copyright<br>
+                    Contact us Creators<br>
+                    Advertise Developers
+                </span>
+                <span class="Footer2"> 
+                    Terms Privacy Policy & Safety<br>
+                    How Youtube works<br>
+                    Test new features
+                </span>
+                <span class="Footer3"> 
+                    © 2023 Oreumi 3rd 시작이반<br>
+                    <t>알아서잘하조</t>
+                </span>
+            </div>
+        </div> 
+
+        
+        
+        <div class="mainContainer">
+            <!-- MAIN --> 
+            <section class = "main"> <!-- 잘뜨는지 확인해주세요 -->
+                <!-- top menu -->
+                <div id="tagArea">
+
+                    <div id="tagNavScrollBtn">
+
+                    <div class="tagNavScrollBtn" id="tagNavScrollBtn">
+
+                            <button class="allBtn" id="allBtn">All</button>
+                            <button class="topMenuBtn" id="topMenuBtn">Item</button>
+                            <button class="topMenuBtn" id="topMenuBtn">음악</button>
+                            <button class="topMenuBtn" id="topMenuBtn">실시간</button>
+                            <button class="topMenuBtn" id="topMenuBtn">뉴스</button>
+                            <button class="topMenuBtn" id="topMenuBtn">게임</button>
+                            <button class="topMenuBtn" id="topMenuBtn">야구</button>
+                            <button class="topMenuBtn" id="topMenuBtn">요리</button>
+                            <button class="topMenuBtn" id="topMenuBtn">만화 영화</button>
+                            <button class="topMenuBtn" id="topMenuBtn">축구</button>
+                            <button class="topMenuBtn" id="topMenuBtn">최근에 업로드된 동영상</button>
+                    </div>
+                </div>
+
+
+                <!--main(video list part)-->
+                <article class="ThumbnailContainer" id="ThumbnailContainer">
+                    <div class="ThumbnailRow" id="ThumbnailRow">
+                        <!-- <div class="ThumbnailRowThumbnailItem" id="ThumbnailRowThumbnailItem">
+                            <div class="ThumbnailImages">
+                                <div class="thumbnailDescContainer">
+                                    <div class="ThumbnailChannel">
+                                        channel img
+                                    </div>
+                                <div class="ThumbnailDesc">
+                                    title, channelName, Time
+                                </div>   
+                            </div>
+                        </div> -->
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div> 
+    <footer id="navFooter">
+        <div id="footerDescription" style="color: #717171;">
+            © 2023 HelpMe YouTube Clone
+        </div>
+    </footer>
+</body>
+<script src="js/home.js"></script>
+</html>

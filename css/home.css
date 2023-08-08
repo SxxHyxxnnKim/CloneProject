@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root { 
+    /* color */
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color: #1359c7;
+    --red-color: #e30504;
+    --grey-dark-color: #616161;
+    --gray-light-color: #8e8e8e;
+  
+    /* size */
+    --padding:12px;
+    --avatar-size: 36px;
+  
+    /* font size */ 
+    --font-superlarge: 22px;
+    --font-verylarge: 20px;
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; 
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  }
+
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* border
+    line for dividing part */
+.border {
+    width: 224px;
+    height: 100%;
+    color : #303030;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #303030; 
+}
+
+/*header div*/
+.wrapHeader{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #212121;
+}
+
+/* header */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    width: 100%;
+    flex-shrink: 0;
+    padding: 15px;
+}
+
+/* header left
+    topLeft for grouping left content(hamburger and logo) */
+.leftContent{
+    margin-left: 16px;
+}
+.leftContent span{
+    color: white;
+    padding-right: 11px;
+}
+
+/*search*/
+.searchBox{
+    display: flex;
+    width: 470px;
+    height: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+.searchInput{
+    border: 1px solid #303030;
+    background-color: #121212;
+    color: #AAAAAA;
+    width: 400px;
+    border: 0;
+    height: 100%;
+    border-radius: 2px 0 0 2px;
+    padding: 10px;
+}
+
+
+.searchBtn{
+    border: none; /*remove button style */
+    border: 1px solid #303030;
+    background-color: #303030;
+    color: white;
+    height: 100%;
+    width: 60px;
+    margin-right: 4px;
+}
+
+/*mic button*/
+.micButton{
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+    border: none; /*remove button style*/
+    border-radius: 70%;
+    margin-left: 5px;
+}
+
+.micButton:hover {
+    background-color: #2980b9;
+}
+
+.mic{
+    color: white;
+}
+
+/* header right
+    profile for grouping right content */
+/* right Content(div) */
+.rightContent{
+    margin: 8px 8px 8px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.create,
+.apps,
+.notifications{
+    padding: 8px;
+}
+
+.notifications{
+    color: #fff;
+}
+
+.micButton:hover {
+    background-color: #2980b9;
+}
+
+/* Sidebar */ 
+.wrapNav {
+    position: sticky;
+    top: 56px;
+    width: 224px;
+    height: 1395px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #212121;
+    color: #FFFFFF;
+    white-space: nowrap; /*prevent auto  enter*/
+}
+
+/* icon gap control  */
+.sideBar li{
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    width: 224px;
+    height: 40px;
+    padding: 8px 0px 8px 24px;
+    justify-content: flex-start;
+}
+
+.sideBar li:hover{
+    background-color: #696666;
+    display: flex;
+    align-items: center;
+    width: 224px;
+    height: 40px;
+    padding: 8px 0px 8px 24px;
+    justify-content: flex-start;
+}
+
+/*side bar title*/
+.sideBarTitle{
+    padding: 8px 24px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #AAAAAA;
+}
+
+.sideBarBottom img{
+    width: 24px;
+    height: 24px;
+} 
+
+.sideBarFooter {
+    color: var(--gray-color, #AAA);
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.Footer1 {
+    display: flex;
+    width: 224px;
+    padding: 16px 24px 0px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.Footer2 {
+    display: flex;
+    width: 224px;
+    padding: 16px 24px 0px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.Footer3 {
+    display: flex;
+    width: 224px;
+    padding: 16px 24px 0px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.sideBarContent li img {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 70%;
+}
+ 
+
+/* li title */
+.subtitle{
+    margin-left: 24px;
+    font-size: 14px;
+    line-height: 40px;
+}
+.sideBarSubscriptions img{
+    width: 40px;
+    height: 40px;
+}
+
+/* main container
+    div for grouping main content */
+.mainContainer{
+    display: flex;
+    background-color: #212121;
+}
+
+
+/* #tagNavScrollForward,
+#tagNavScrollBackward {
+  position: relative;
+  top: 3.5rem;
+  height: 3.5rem;
+  width: 7rem;
+} */
+
+/* #tagNavScrollForward {
+  float: left;
+  background: linear-gradient(to right, #212121 50%, transparent);
+}
+
+#tagNavScrollForward:hover {
+  background: linear-gradient(to right, #303030 50%, transparent);
+}
+
+#tagNavScrollBackward {
+  float: right;
+  background: linear-gradient(to left, #212121 50%, transparent);
+  text-align: right;
+}
+
+#tagNavScrollBackward:hover {
+  background: linear-gradient(to left, #303030 50%, transparent);
+} */
+
+/* #tagNav::-webkit-scrollbar {
+    display: none;
+  } */
+
+/* #tagNavScrollForward{
+    display: flex;
+    margin-right: 8px;
+    align-items: center;
+} */
+.allBtn,
+.topMenuBtn{
+   margin-bottom: 8px;
+   padding: 8px 12px;
+   color: #fff;
+   background-color: #303030;
+   border: 1px solid #AAAAAA;
+   border-radius: 32px;
+}
+
+/* btn mouse hover */
+#tagNavScrollBtn button:hover{
+   color: #303030;
+   background-color: #fff;
+}
+
+/* ================================================ 
+/================================================ 
+main(video list part)/ */
+.ThumbnailRow{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    margin-left: 24px;
+}
+/* thumbnail video /
+/ ThumbnailRowThumbnailItem
+    div for grouping video */
+.ThumbnailRowThumbnailItem{
+    margin-right: 16px;
+}
+
+/* thumbnailDescContainer
+    div for grouping thumbnail information */
+.thumbnailDescContainer{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+/* thumbnail image */
+.Image1{
+    width: 311px;
+    height: 175px;
+}
+
+/* profile image */
+.UserAvatar img{
+    border-radius: 70%;
+    overflow: hidden;
+    margin-top: 12px;
+    margin-right: 12px;
+
+}
+
+/* video desc */
+.videoTitle{
+    height: 20px;
+    color: var(--white-color);
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.ChannelName,
+.Time{
+    color: #AAAAAA;
+    font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    .search input {
+      width: 25rem;
+    }
+}
+
+/* modal css */
+/* mic modal */
+/* micContainer
+    div for grouping mic modal content */
+.micContainer {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   padding-top: 50px;
+   left: 0%;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgb(0, 0, 0);
+   background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* mic modal inner div */
+.micModal {
+    position: relative;
+   background-color: #fefefe;
+   margin: auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 30%
+}
+
+/* micModalClose
+    div for mic modal close button */
+.micModalClose{
+    display: flex;
+}
+
+/* mic modal close button */
+.closeMic{
+    margin-left: auto;
+    border: none;
+    border-radius: 70%;
+    width: 30px;
+    height: 30px;
+}
+
+.closeMic:hover{
+    background-color: #888;
+}
+
+/* mic modal text div */
+.micModalText{
+    margin-bottom: 30px;
+}
+.micModalText p{
+    margin-top: 10px;
+}
+
+/* check button */
+.checkMic{
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: 35px;
+    border: none;
+    background-color: var(--red-color);
+    color: #fff;
+    font-size: 20px;
+}
+/* mic button */
+.record{
+    display: block;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    background-color: var(--red-color);
+    border: none;
+    border-radius: 70%;
+}
+
+.checkMic:hover,
+.record:hover{
+    background-color: #A50000;
+}
+/* create video modal */
+.createContainer{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding-top: 50px;
+    left: 78%;
+    top: 0;
+    overflow: auto;
+    border-radius: 20px;
+}
+.createList {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+}
+/* create modal content */
+.videoUpload{
+    margin-bottom: 10px;
+}
+.videoUpload,
+.videoLive{
+    display: flex;
+    align-items: center;
+}
+.createListContent{
+    margin-left: 10px;
+}
+
+/* notifications modal */
+.notiContainer{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding-top: 10px;
+    left: 70%;
+    top: 50px;
+    overflow: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 350px;
+    height: 500px;
+}
+/* notifications header part */
+.notiHeader{
+    display: flex;
+    align-items: center;
+}
+.notiTitle{
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.notiHeader span{
+    margin-left: auto;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+/* notifications */
+.notifications li{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.notiChannelImg{
+    width: 50px;
+    height: 50px;
+    border-radius: 70%;
+}
+
+.notiVideoContent{
+    margin-left: 10px;
+    color: #000000;
+}
+
+.videoInfo{
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+.notiDate{
+    font-size: 15px;
+}
+
+/* profile modal */
+.profileContainer{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding-top: 50px;
+    left: 86%;
+    top: 0;
+    overflow: auto;
+    border-radius: 5px;
+}
+.profileList{
+    background-color: #fff;
+    width: 150px;
+    height: 100px;
+    padding: 5px;
+}
+.userName{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.myPage,
+.logOutDiv{
+    margin-left: 10px;
+}
+.logOutDiv{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.logout{
+    margin-left: 5px;
+}
+
+
+
+
+
